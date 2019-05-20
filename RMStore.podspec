@@ -27,6 +27,12 @@ Pod::Spec.new do |s|
     nsudp.source_files = 'RMStore/Optional/RMStoreUserDefaultsPersistence.{h,m}', 'RMStore/Optional/RMStoreTransaction.{h,m}'
   end
 
+  s.subspec 'AppReceipt' do |arv|
+    arv.dependency 'RMStore/Core'
+    arv.platform = :ios, '7.0'
+    arv.source_files = 'RMStore/Optional/RMAppReceipt.{h,m}'
+  end
+  
   s.subspec 'AppReceiptVerifier' do |arv|
     arv.dependency 'RMStore/Core'
     arv.platform = :ios, '7.0'
